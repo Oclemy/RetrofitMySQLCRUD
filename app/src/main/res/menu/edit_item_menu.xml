@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Options menu for the CRUDActivity -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Views.CRUDActivity">
+
+    <item
+        android:id="@+id/editMenuItem"
+        android:title="SAVE"
+        android:icon="@drawable/m_done"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/deleteMenuItem"
+        android:title="DELETE"
+        android:icon="@drawable/m_delete"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/viewAllMenuItem"
+        android:title="VIEW ALL"
+        android:icon="@drawable/m_list"
+        app:showAsAction="ifRoom" />
+</menu>
