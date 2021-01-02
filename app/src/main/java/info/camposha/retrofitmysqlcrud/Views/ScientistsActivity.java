@@ -99,7 +99,7 @@ public class ScientistsActivity extends AppCompatActivity
                         allPagesScientists.clear();
                     }
                     allPagesScientists.addAll(currentPageScientists);
-                    show(ScientistsActivity.this,currentPageScientists.size()+" Scientists Found");
+                   // show(ScientistsActivity.this,currentPageScientists.size()+" Scientists Found");
                 } else {
                     if (action.equalsIgnoreCase("GET_PAGINATED_SEARCH")) {
                         allPagesScientists.clear();

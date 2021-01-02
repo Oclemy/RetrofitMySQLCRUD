@@ -120,10 +120,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
              Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
             holder.nameTxt.setText(spanString);
-        } else {
-            //Utils.show(ctx, "Search string empty");
         }
-
         //highligh galaxy text while searching
         if (galaxy.contains(searchString) && !(searchString.isEmpty())) {
 
