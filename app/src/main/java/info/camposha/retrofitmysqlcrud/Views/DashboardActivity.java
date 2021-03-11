@@ -2,7 +2,6 @@ package info.camposha.retrofitmysqlcrud.Views;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,39 +23,21 @@ public class DashboardActivity extends AppCompatActivity {
     private void initializeWidgets(){
         viewScientistsCard = findViewById(R.id.viewScientistsCard);
         addScientistCard = findViewById(R.id.addScientistCard);
-        third = findViewById(R.id.third);
+        third = findViewById(R.id.aboutCard);
         closeCard = findViewById(R.id.closeCard);
 
-		viewScientistsCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-				Utils.openActivity(DashboardActivity.this,ScientistsActivity.class);
+		viewScientistsCard.setOnClickListener(v -> Utils.openActivity(DashboardActivity.this,ScientistsActivity.class));
+        addScientistCard.setOnClickListener(v -> Utils.openActivity(DashboardActivity.this,CRUDActivity.class));
+        third.setOnClickListener(v -> {
 
-            }
+            Utils.openActivity(DashboardActivity.this,AboutUsActivity.class);
+            //Or show a dialog
+//                Utils.showInfoDialog(DashboardActivity.this, "YEEES",
+//                "Hey You can Display another page when this is clicked");
+
+
         });
-        addScientistCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-				Utils.openActivity(DashboardActivity.this,CRUDActivity.class);
-
-            }
-        });
-        third.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Utils.showInfoDialog(DashboardActivity.this, "YEEES",
-                "Hey You can Display another page when this is clicked");
-
-            }
-        });
-        closeCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-				finish();
-
-            }
-        });
+        closeCard.setOnClickListener(v -> finish());
     }
     /**
      * Let's override the attachBaseContext() method

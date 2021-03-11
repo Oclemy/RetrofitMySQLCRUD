@@ -159,7 +159,7 @@
                     android:foreground="?android:attr/selectableItemBackground">
 
                     <LinearLayout
-                        android:id="@+id/third"
+                        android:id="@+id/aboutCard"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -177,7 +177,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Another Item"
+                            android:text="About Us"
                             android:layout_gravity="center_horizontal"
                             android:textStyle="bold" />
 
